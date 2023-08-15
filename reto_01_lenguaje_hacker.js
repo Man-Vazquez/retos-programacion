@@ -43,8 +43,9 @@ function encryption(word){
 
     let textEncryption = '';
 
-    for(let i = 0; i < word.length; i++){
-        let findLetter = word[i];
+    /* for(let i = 0; i < word.length; i++){ */
+    for(char of word){
+        let findLetter = char;
         let textLetter = alphabet.find((text) => text.letter === findLetter);
         textEncryption += textLetter.leet;
     }
