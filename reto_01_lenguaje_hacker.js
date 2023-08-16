@@ -38,18 +38,29 @@ function encryption(word){
         { letter: 'x', leet: '><' },
         { letter: 'y', leet: 'j' },
         { letter: 'z', leet: '7_' },
-        { letter: ' ', leet: ' ' }
+        { letter: '1', leet: 'L' },
+        { letter: '2', leet: 'R' },
+        { letter: '3', leet: 'E' },
+        { letter: '4', leet: 'A' },
+        { letter: '5', leet: 'S' },
+        { letter: '6', leet: 'b' },
+        { letter: '7', leet: 'T' },
+        { letter: '8', leet: 'B' },
+        { letter: '9', leet: 'g' },
+        { letter: '0', leet: '()' }
     ];
 
     let textEncryption = '';
-
-    /* for(let i = 0; i < word.length; i++){ */
+    
     for(char of word){
-        let findLetter = char;
-        let textLetter = alphabet.find((text) => text.letter === findLetter);
-        textEncryption += textLetter.leet;
+        let findLetter = char.toLowerCase()
+        let textLetter = alphabet.find((text) => text.letter === findLetter)
+        /* Se agrego esta validacion, post a ver la respuesta del video */
+        textLetter !== undefined ? textEncryption += textLetter.leet : textEncryption += char 
     }
     console.log(textEncryption)
 }
 
-encryption('hola mundo');
+encryption('hola MUNDO 123');
+
+/* Respuesta en el siguiente enlace: https://youtu.be/EIxlo_SVUss */

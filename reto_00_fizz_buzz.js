@@ -25,3 +25,5 @@ function fizzbuzz(){
 }
 
 fizzbuzz();
+
+/* Respuesta en el siguiente enlace: https://youtu.be/2iW4NCzOAxs */
